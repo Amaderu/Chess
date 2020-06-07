@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Board.cs" />
     <Compile Include="Chess.cs" />
+    <Compile Include="Moves.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="FigureOnSquare.cs" />
     <Compile Include="Figure.cs" />

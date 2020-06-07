@@ -20,7 +20,6 @@ namespace Chess
             	Print(ChessToAscii(chess));
             	string move = Console.ReadLine();
             	if(move=="") break;
-                Console.Clear();
             	chess=chess.Move(move);
             }
             
@@ -57,7 +56,7 @@ namespace Chess
                 Console.Write(c);
             }
             Console.ForegroundColor = oldForeColor;
-            Console.SetCursorPosition(0, 12);
+            //Console.SetCursorPosition(0, 12);
         }
 
         //public static void BoardColor(string text)

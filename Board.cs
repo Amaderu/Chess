@@ -29,7 +29,7 @@ namespace Chess
             string[] parts = fen.Split();
             if(parts.Length!=6) return;
             InitFigures(parts[0]);
-    		moveColor= (parts[1]=="b") ? Color.white : Color.black;
+    		moveColor=(parts[1]=="b") ? Color.black : Color.white;
             moveNumber= int.Parse(parts[5]);
     	}
         void InitFigures(string data)
@@ -83,8 +83,8 @@ namespace Chess
     		next.SetFigureAt(fm.from, Figure.none);
     		next.SetFigureAt(fm.to,fm.promotion == Figure.none ? fm.figure : fm.promotion);
     		if(moveColor==Color.black)
-    		next.moveNumber++;
-    		next.moveColor.FlipColor();
+    		    next.moveNumber++;
+    		next.moveColor= next.moveColor.FlipColor();
             next.GenerateFEN();
     		return next;
     	}
